@@ -4,6 +4,7 @@ public class Array {
     public static void main(String args[]) {
         Scanner sc = new Scanner (System.in);
         String email = sc.nextLine();
+        sc.close();
         String userName = "";
     
         for(int i=0; i<email.length(); i++) {
