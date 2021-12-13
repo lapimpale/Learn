@@ -1,6 +1,6 @@
 import java.util.*;
  
-// Program to count the frequency of the elements in a list
+// Program to check the max occured String in an ArrayList.
 class Main
 {
     public static void main(String[] args)
