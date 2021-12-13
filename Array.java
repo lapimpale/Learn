@@ -11,7 +11,7 @@ public class Array {
     for(int i=0; i<n; i++) {
         numbers[i] = sc.nextInt();
     }
-
+    sc.close();
     int max = Integer.MIN_VALUE;
     int min = Integer.MAX_VALUE;
    
@@ -23,7 +23,6 @@ public class Array {
              max = numbers[i];
          }
      }
-     sc.close();
 
      System.out.println("Largest number is : " + max);
      System.out.println("Smallest number is : " + min);
