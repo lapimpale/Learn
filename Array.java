@@ -23,6 +23,7 @@ public class Array {
              max = numbers[i];
          }
      }
+     sc.close();
 
      System.out.println("Largest number is : " + max);
      System.out.println("Smallest number is : " + min);
