@@ -1,5 +1,7 @@
 import java.util.*;
  
+//Time Complexity: O(n*n!) 
+//Space Complexity: O(|s|)
 class StringPermutations{
   
 static void permute(String s , String answer)
