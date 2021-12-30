@@ -30,6 +30,7 @@ public static void main(String args[])
      
     System.out.print("Enter the string : ");
     s = scan.next();
+    scan.close();
      
     System.out.print("\nAll possible strings are : ");
     permute(s, answer);
