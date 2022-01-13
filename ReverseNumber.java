@@ -8,6 +8,8 @@ public class ReverseNumber{
 
             sol+=rem;
 
+            n/=10;
+
         }
 
         System.out.println(sol);
