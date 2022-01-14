@@ -1,7 +1,11 @@
+import java.util.Scanner;
+
 public class ReverseNumber{
 
     public static void main(String[] args) {
-        int n = 543453;
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        in.close();
         int sol = 0;
         while(n!=0){
             int rem = n%10;
