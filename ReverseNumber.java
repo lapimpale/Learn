@@ -6,7 +6,7 @@ public class ReverseNumber{
         while(n!=0){
             int rem = n%10;
 
-            sol+=rem;
+            sol = sol * 10 + rem;
 
             n/=10;
 
