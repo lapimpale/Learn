@@ -47,6 +47,7 @@ public class WeirdAlgorithm {
         public static void main(String[] args){
         Scanner s=new Scanner(System.in);
         long n=s.nextLong();
+        s.close();
         fun(n);
     }
 }
