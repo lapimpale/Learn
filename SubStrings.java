@@ -15,7 +15,7 @@ import java.util.*;
 public class SubStrings {
     public static void main(String[] args) {
         int count = 0;
-        String s = "abcdef";
+        String s = "abcdefabcd";
         int n = s.length();
         for(int i = 0; i< n ;i++){
             for(int j = n;j>i;j--){
@@ -26,13 +26,13 @@ public class SubStrings {
             }
         }
         System.out.println(count);
-        ArrayList<String> ans = new ArrayList<String>();
+        HashSet<String> ans = new HashSet<String>();
         recursion(s, ans);
         System.out.println(ans);
         System.out.println(ans.size());
     }
 
-    static void recursion(String s, ArrayList<String> ans){
+    static void recursion(String s, HashSet<String> ans){
             if(s.length()<2){
                 return;
             }
