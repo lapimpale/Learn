@@ -29,6 +29,7 @@ public class SubStrings {
         ArrayList<String> ans = new ArrayList<String>();
         recursion(s, ans);
         System.out.println(ans);
+        System.out.println(ans.size());
     }
 
     static void recursion(String s, ArrayList<String> ans){
