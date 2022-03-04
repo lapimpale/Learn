@@ -61,16 +61,16 @@ public class NumberOfBricks {
             //Subtracting the number of bricks used by john at x'th time
             numberOfBricks -= x;
             //checking whether we are out of stock after john used the bricks at x'th time.
-            if(numberOfBricks<=0) {
+            if(numberOfBricks<=x) {
                 winner = john; //Declaring John as winner because he placed the last brick.
-                numberOfBricks += x; //adding the number of bricks used at x'th time, which caused us shortage of the bricks.
+                //numberOfBricks += x; //adding the number of bricks used at x'th time, which caused us shortage of the bricks.
                 break; //as we are satisfied with our results, breaking out of loop.
             }
 
             numberOfBricks -= 2*x; //Subtracting the number of bricks used by jack at x'th time, the number of bricks used by jack is double of john hence 2 * x.
-            if(numberOfBricks<=0) {
+            if(numberOfBricks<=2*x) {
                 winner = jack; //Declaring Jack as winner because he placed the last brick.
-                numberOfBricks += 2*x; //adding the number of bricks used at x'th time, which caused us shortage of the bricks.
+                //numberOfBricks += 2*x; //adding the number of bricks used at x'th time, which caused us shortage of the bricks.
                 break; //as we are satisfied with our results, breaking out of loop.
             }
             x++; // incrementing x by 1 in each loop.
