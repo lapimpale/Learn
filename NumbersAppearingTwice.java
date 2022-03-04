@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 /*
@@ -43,6 +44,32 @@ public class NumbersAppearingTwice {
                 //adding the element to our answer list
                 numbersAppearingTwice.add(i);
             }
+        }
+
+        System.out.println(numbersAppearingTwice);
+        approach2(data);
+    }
+
+    private static void approach2(int[] data) {
+        //sorting the array
+        Arrays.sort(data);
+
+        //initializing ArrayList to store the result;
+        ArrayList<Integer>numbersAppearingTwice = new ArrayList<Integer>();
+
+        int prev = data[0]; //updating 1st element of sorted array as prev number
+        int count = 0; // initializing count as 0.
+
+        for(int i =0; i<data.length;i++){
+            if(data[i] == prev){ // if element is matching with previous value
+                count++; // increase the counter
+            }else{
+                if(count == 2){ // if element is not matching with previous value and the count of appearance is 2
+                    numbersAppearingTwice.add(data[i]-1); // add previous element from array to list.
+                }
+                count= 1; // reset the count to 1.
+                prev = data[i]; // update the previous value of the element to next different element.
+            }            
         }
 
         System.out.println(numbersAppearingTwice);
