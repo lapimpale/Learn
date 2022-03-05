@@ -57,20 +57,21 @@ public class NumberOfBricks {
         int winner = 0;
 
         //Running a while loop until we are out of stock for the bricks
-        while(numberOfBricks>=0){
-            //Subtracting the number of bricks used by john at x'th time
-            numberOfBricks -= x;
-            //checking whether we are out of stock after john used the bricks at x'th time.
-            if(numberOfBricks<=x) {
+        while(numberOfBricks>=0){           
+            
+            //checking if john has bricks available to use for wall
+            if(numberOfBricks>=x) {
+                numberOfBricks -= x;//Subtracting the number of bricks used by john at x'th time
+            }else{
                 winner = john; //Declaring John as winner because he placed the last brick.
-                //numberOfBricks += x; //adding the number of bricks used at x'th time, which caused us shortage of the bricks.
                 break; //as we are satisfied with our results, breaking out of loop.
             }
-
-            numberOfBricks -= 2*x; //Subtracting the number of bricks used by jack at x'th time, the number of bricks used by jack is double of john hence 2 * x.
-            if(numberOfBricks<=2*x) {
+            
+            //checking if jack has bricks available twice of john to use for wall
+            if(numberOfBricks>=2*x) {
+                numberOfBricks -= 2*x; //Subtracting the number of bricks used by jack at x'th time, the number of bricks used by jack is double of john hence 2 * x.
+            }else{
                 winner = jack; //Declaring Jack as winner because he placed the last brick.
-                //numberOfBricks += 2*x; //adding the number of bricks used at x'th time, which caused us shortage of the bricks.
                 break; //as we are satisfied with our results, breaking out of loop.
             }
             x++; // incrementing x by 1 in each loop.
