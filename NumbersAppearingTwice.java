@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Vector;
 
 /*
 Problem Statement 1:
@@ -55,7 +56,7 @@ public class NumbersAppearingTwice {
         Arrays.sort(data);
 
         //initializing ArrayList to store the result;
-        ArrayList<Integer>numbersAppearingTwice = new ArrayList<Integer>();
+        Vector<Integer>numbersAppearingTwice = new Vector<Integer>();
 
         int prev = data[0]; //updating 1st element of sorted array as prev number
         int count = 0; // initializing count as 0.
