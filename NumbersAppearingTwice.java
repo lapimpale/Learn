@@ -75,7 +75,7 @@ public class NumbersAppearingTwice {
                 }
                 count= 1; // reset the count to 1.
                 prev = data[i]; // update the previous value of the element to next different element.
-            }            
+            }
         }
 
         System.out.println(numbersAppearingTwice);
