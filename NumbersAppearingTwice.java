@@ -65,7 +65,7 @@ public class NumbersAppearingTwice {
                 count++; // increase the counter
             }else{
                 if(count == 2){ // if element is not matching with previous value and the count of appearance is 2
-                    numbersAppearingTwice.add(data[i]-1); // add previous element from array to list.
+                    numbersAppearingTwice.add(data[i-1]); // add previous element from array to list.
                 }
                 count= 1; // reset the count to 1.
                 prev = data[i]; // update the previous value of the element to next different element.
@@ -75,3 +75,4 @@ public class NumbersAppearingTwice {
         System.out.println(numbersAppearingTwice);
     }
 }
+
