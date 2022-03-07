@@ -52,15 +52,17 @@ public class NumberOfBricks {
         int numberOfBricks=sc.nextInt();
         sc.close();
 
+        // approach2(numberOfBricks);
+
         //initializing values for John and Jack for easy understanding and winner so than we can assign jack or john to winner.
         int x = 1; int john = 1,jack = 2;
-        int winner = 0;
+        int winner = 1;
 
         //Running a while loop until we are out of stock for the bricks
         while(numberOfBricks>=0){           
             
             //checking if john has bricks available to use for wall
-            if(numberOfBricks>=x) {
+            if(numberOfBricks>x) {
                 numberOfBricks -= x;//Subtracting the number of bricks used by john at x'th time
             }else{
                 winner = john; //Declaring John as winner because he placed the last brick.
@@ -68,7 +70,7 @@ public class NumberOfBricks {
             }
             
             //checking if jack has bricks available twice of john to use for wall
-            if(numberOfBricks>=2*x) {
+            if(numberOfBricks>2*x) {
                 numberOfBricks -= 2*x; //Subtracting the number of bricks used by jack at x'th time, the number of bricks used by jack is double of john hence 2 * x.
             }else{
                 winner = jack; //Declaring Jack as winner because he placed the last brick.
@@ -79,4 +81,14 @@ public class NumberOfBricks {
 
         System.out.println(winner +" "+ numberOfBricks);
     }
+
+    // static void approach2(int numberOfBricks){
+    //     int n = numberOfBricks;
+
+    //     if(n%3==0){
+    //         System.out.println("2," + n/3 +","+n%3);
+    //     }else{
+    //         System.out.println("1," + n/3+","+n%3);
+    //     }
+    // }
 }
