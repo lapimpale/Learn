@@ -52,8 +52,6 @@ public class NumberOfBricks {
         int numberOfBricks=sc.nextInt();
         sc.close();
 
-        approach2(numberOfBricks);
-
         //initializing values for John and Jack for easy understanding and winner so than we can assign jack or john to winner.
         int x = 1; int john = 1,jack = 2;
         int winner = 0;
@@ -80,12 +78,5 @@ public class NumberOfBricks {
         }
 
         System.out.println(winner +" "+ numberOfBricks);
-    }
-
-    private static void approach2(int numberOfBricks) {
-        int winner = numberOfBricks%2;
-        int remainingBricks = numberOfBricks%3; 
-
-        System.out.println(winner+1 +" "+remainingBricks + " Second Approach");
     }
 }
