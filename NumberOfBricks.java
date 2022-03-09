@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Vector;
 
 /*
 Problem Statement 2: 
@@ -52,7 +53,12 @@ public class NumberOfBricks {
         int numberOfBricks=sc.nextInt();
         sc.close();
 
-        // approach2(numberOfBricks);
+        int[] ans = bricksAndWinner(numberOfBricks); // Second Approach with binaray search
+
+        for(int i = 0; i <2; i++){
+            System.out.print(ans[i] + " ");
+            if(i == 1) System.out.println();
+        }
 
         //initializing values for John and Jack for easy understanding and winner so than we can assign jack or john to winner.
         int x = 1; int john = 1,jack = 2;
@@ -82,13 +88,24 @@ public class NumberOfBricks {
         System.out.println(winner +" "+ numberOfBricks);
     }
 
-    // static void approach2(int numberOfBricks){
-    //     int n = numberOfBricks;
-
-    //     if(n%3==0){
-    //         System.out.println("2," + n/3 +","+n%3);
-    //     }else{
-    //         System.out.println("1," + n/3+","+n%3);
-    //     }
-    // }
+    static int[] bricksAndWinner(int nb){
+        int total = 0;
+        int left = 0, right = nb;
+    
+        while (left < right) {
+            int mid = left + (right - left)/2;
+            total = 3 * (mid * (mid+1)) /2;
+            if (total < nb)
+                left = mid+1;
+            else
+                right = mid;
+            }
+        int diff = 3 * (left * (left+1)) /2;
+        if (nb - diff + 2 * left  > 0)
+            return new int[] {2, nb - diff + 2 * left };
+        else{
+            diff = 3 * ((left-1) * left) / 2;
+            return new int[] {1, nb - diff};
+        }
+    }
 }
