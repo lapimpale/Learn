@@ -36,7 +36,7 @@ public class RiverSizes{
                 }
             }
         }
-        System.out.println(LongestRiverList);
+        System.out.println(riverSizesList);
     }
 
     public static int riverSize(int[][] map,int i, int j){
