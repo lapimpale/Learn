@@ -17,8 +17,10 @@ public class LastBreadEater {
         int k = 6;
 
         int answer = lastBreadEater(input,k);
+        int answer2 = lastBreadEater2(input,k);
 
         System.out.println(answer);
+        System.out.println(answer2);
     
     }
 
@@ -34,6 +36,20 @@ public class LastBreadEater {
             }
         }       
         return i;
+    }
+
+    public static int lastBreadEater2(int[] breads, int k) {
+            long sum = 0;
+            for (int bread : breads) {
+                sum += bread; 
+            }
+            k = (int)((long)k % sum);
+            int count = 0;
+            while (k > 0) {
+                k -= breads[count++];
+            }
+            return k == 0 ? count : count - 1;
+        
     }
     
 }
