@@ -26,27 +26,24 @@ Output:
 
 */
 
-
-
 public class WeirdAlgorithm {
-    static void fun(long n){
-        if(n==1){
-            System.out.print(1+" ");
+    static void fun(long n) {
+        if (n == 1) {
+            System.out.print(1 + " ");
             return;
-        }
-        else{
-            System.out.print(n+" ");
-            if(n%2==1){
-                fun(3*n+1);
-            }
-            else{
-                fun(n/2);
+        } else {
+            System.out.print(n + " ");
+            if (n % 2 == 1) {
+                fun(3 * n + 1);
+            } else {
+                fun(n / 2);
             }
         }
     }
-        public static void main(String[] args){
-        Scanner s=new Scanner(System.in);
-        long n=s.nextLong();
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        long n = s.nextLong();
         s.close();
         fun(n);
     }

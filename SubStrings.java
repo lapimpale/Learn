@@ -12,15 +12,17 @@ Output: 1
 */
 
 import java.util.*;
+
 public class SubStrings {
     public static void main(String[] args) {
         int count = 0;
         String s = "abcdefabcd";
         int n = s.length();
-        for(int i = 0; i< n ;i++){
-            for(int j = n;j>i;j--){
-                if(s.substring(i,j).contains("a")&&s.substring(i,j).contains("b")&&s.substring(i,j).contains("c")){
-                    System.out.println(s.substring(i,j));
+        for (int i = 0; i < n; i++) {
+            for (int j = n; j > i; j--) {
+                if (s.substring(i, j).contains("a") && s.substring(i, j).contains("b")
+                        && s.substring(i, j).contains("c")) {
+                    System.out.println(s.substring(i, j));
                     count++;
                 }
             }
@@ -32,16 +34,16 @@ public class SubStrings {
         System.out.println(ans.size());
     }
 
-    static void recursion(String s, HashSet<String> ans){
-            if(s.length()<2){
-                return;
-            }
-
-            if(s.contains("a")&&s.contains("b")&&s.contains("c")){
-                ans.add(s);
-            }
-
-            recursion(s.substring(1), ans);
-            recursion(s.substring(0,s.length()-1), ans);
+    static void recursion(String s, HashSet<String> ans) {
+        if (s.length() < 2) {
+            return;
         }
+
+        if (s.contains("a") && s.contains("b") && s.contains("c")) {
+            ans.add(s);
+        }
+
+        recursion(s.substring(1), ans);
+        recursion(s.substring(0, s.length() - 1), ans);
+    }
 }
