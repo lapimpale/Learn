@@ -1,10 +1,9 @@
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class SetVsList {
     public static void main(String[] args) {
         ArrayList<Integer> myList = new ArrayList<>();
-        HashSet<Integer> mySet = new HashSet<Integer>();
+        // HashSet<Integer> mySet = new HashSet<Integer>();
 
         // indexed
         myList.add(1);
@@ -17,6 +16,5 @@ public class SetVsList {
 
         // duplicate elements
         // iteration by index
-        // multiple null
     }
 }
